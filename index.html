@@ -26,7 +26,7 @@
 </head>
 
 <body class="anton-regular">
-    <main class="bg-black min-h-screen bg-[url(images/background.png)] bg-no-repeat bg-center">
+    <main class="bg-black min-h-screen bg-[url(images/planet.png)] bg-no-repeat bg-center bg-cover">
         <!-- game start menu -->
         <section id="game-start-menu" class="text-white">
             <div class="flex flex-col items-center space-y-5 min-h-screen justify-center">
@@ -38,7 +38,7 @@
         <!-- playground -->
         <section id="playground" class="flex flex-col justify-center items-center min-h-screen space-y-10 hidden">
             <!-- screen -->
-            <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB2] flex flex-col items-center ">
+            <div class="artboard artboard-horizontal phone-6 border-[20px] border-[#010313CC] bg-[#FFFFFFB2] flex flex-col items-center rounded-lg ">
                 <div>
                     <p class="bg-[#2F2941] text-white pb-3 px-3 max-w-96 rounded-b-md">Don't watch keyboard while playing...</p>
                 </div>
@@ -86,16 +86,17 @@
             <!-- life line -->
             <div class="inter flex w-screen justify-around">
                 <button class="btn text-white bg-[#894189] rounded-full border-none">Life <img src="images/hart.svg"
-                        alt=""><span>1</span></button>
+                        alt=""><span id="current-life">5</span></button>
                 <button class="btn text-white bg-[#360490] rounded-full border-none">Score <img src="images/doller.svg"
-                        alt=""><span>1</span></button>
+                        alt=""><span id="current-score">0</span></button>
             </div>
         </section>
         <!-- final score -->
         <section id="final-score" class="inter flex justify-center items-center min-h-screen hidden">
             <div class="bg-[#FFFFFF33] text-center space-y-5 p-4 rounded-md">
-                <h2 class="font-semibold text-6xl text-white">Score : 14</h2>
-                <button class="btn">Play again</button>
+                <p class="text-white font-medium text-xl">Game over!!!</p>
+                <h2 class="font-semibold text-6xl text-white">Score :<span id="score">14</span></h2>
+                <button onclick="play()" class="btn">Play again</button>
                 <p class="text-white font-medium text-xl">Practice will make you Pro</p>
             </div>
         </section>

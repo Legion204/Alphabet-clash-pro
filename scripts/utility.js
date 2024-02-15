@@ -10,6 +10,10 @@ function setKeyboardBackground(elementId){
     const element = document.getElementById(elementId);
     element.classList.add('bg-amber-400')
 }
+function removeKeyboardBackground(elementId){
+    const element = document.getElementById(elementId);
+    element.classList.remove('bg-amber-400')
+}
 
 function getRandomAlphabet(){
     const alphabetString='abcdefghijklmnopqrstuvwxyz'
